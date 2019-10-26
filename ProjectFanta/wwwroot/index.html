@@ -4,41 +4,50 @@
 	<link rel="stylesheet" type="text/css" href="home.css" />
 </head>
 <body>
-
 	<hr>
 
 	<header>
-		<h1><img src="images/Logo.png" alt="Fanta" /></h1>
-		<h2>
-			Make an SMS distribution group in seconds.
-		</h2>
-		<section>
-			<a href="owner.html"><strong>Create</strong> a distribution</a>
-			<a href="subscribe.html"><strong>Subscribe</strong> to a distribution</a>
-		</section>
+		<div class="container">
+			<h1><img src="images/logo.png" alt="Fanta" /></h1>
+			<h2>
+				Make an SMS distribution group in seconds.
+			</h2>
+		</div>
+		<img class="header-silhouette" src="images/banner-silhouette.svg" alt="" aria-hidden="true" />
 	</header>
 
-	<p>
-		Project fanta was created by 4 dudes meming during a the HackTheMidlands hackathon 2019 in Birmingham.
-		<br />
-		We hope you find great convenience from this simple app powered by Twilio!
-	</p>
 
-	<div class="owner">
-		<h2>Title</h2>
-		<form>
-			<fieldset>
-				<input placeholder="Input phone number here"></input>
-				<button>Submit</button>
-			</fieldset>
+	<div class="panel-container">
+		<form class="panels">
+			<h2>Create</h2>
+			<p class="desc">a distribution group</p>
+			<p>Enter your phone number:</p>
+			<input placeholder="00000000000"></input>
+
+			<p>Here's your distribution key!</p>
+			<p class="dist">Distribute it!</p>
+			<div class="key-area">
+				WcP10Dk
+			</div>
+
+			<button type="submit">Go</button>
 		</form>
-		<div class="key-area">
-			<h2>
-				Key
-			</h2>
-			G6s8n1
-		</div>
+
+		<form id="sub" class="panels">
+			<h2>Subscribe to</h2>
+			<p class="desc">a distribution group</p>
+
+			<p>Enter the distribution key:</p>
+			<input placeholder="00000000000"></input>
+			<p>Enter your phone number:</p>
+			<input class="sub-input" placeholder="00000000000"></input>
+			<button type="submit">Go</button>
+		</form>
 	</div>
 
+	<div class="info">
+		<p>Project fanta was created by 4 dudes meming during the HackTheMidlands hackathon 2019 in birmingham.</p>
+		<p class="meme">We hope you find great conveniance from this simple app powered by Twilo!</p>
+	</div>
 </body>
 </html>

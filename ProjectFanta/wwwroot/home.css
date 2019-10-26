@@ -1,5 +1,11 @@
-﻿@import "main.css";
-@import "variables.css";
+﻿@import "variables.css";
+
+body {
+	background-color: var(--light-bg-colour);
+	color: var(--text);
+	margin: 0;
+	font-family: var(--font);
+}
 
 hr {
 	margin: 0;
@@ -8,58 +14,139 @@ hr {
 	background: var(--gradient);
 }
 
-.owner {
-    display: flex;
-    flex-direction: column;
-    max-width: 425px;
-    margin: auto;
-    align-self: center;
-    background-color: rgb(45, 45, 45);
-    border-radius: 5px;
-    border: 2px solid var(--accent);
+header {
+	background-color: var(--main-bg-colour);
+	font-size: 0;
 }
 
-form {
-	align-self: center;
-}
-
-fieldset {
-	font-size: 1.4em;
-	padding: 0.5em;
-	border: none;
-	font-family: sans-serif;
-}
-
-input, button {
-	font-size: inherit;
-	padding: 0.2em;
-	margin: 0.1em 0.2em;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-	border: 2px solid;
-	border-radius: 5px;
-}
-
-input {
-	border-color: white;
-}
-
-	input:focus {
-		outline: none;
-		border: 2px solid var(--accent);
+	header .container {
+		max-width: 640px;
+		margin: 0 auto;
+		overflow: auto;
 	}
 
-button {
-	background-color: var(--accent);
-	border-color: var(--accent);
+	header h1 {
+		margin: 0;
+	}
+
+		header h1 img {
+			margin-top: 30px;
+			width: 100px;
+		}
+
+	header img.header-silhouette {
+		width: 100%;
+		margin: 0;
+	}
+
+	header h2 {
+		margin: 50px 0;
+		font-size: 20px;
+	}
+
+.panel-container {
+	display: flex;
+    max-width: 775px;
+	margin: -100px auto 0 auto;
 }
 
-.key-area {
+.panels {
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+	margin: auto;
+	padding: 20px;
+	align-self: center;
+	background-color: var(--main-bg-colour);
 	border-radius: 5px;
-	padding: 10px;
+	border: 2px solid var(--accent);
+	box-sizing: border-box;
 }
 
 h2 {
 	margin: 0;
+	text-align: center;
+	font-size: 18px;
+}
+
+p {
+	margin: 0;
+	font-size: 12px;
+	color: var(--hint-text);
+}
+
+.desc {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: var(--text);
+}
+
+input {
+	background-color: var(--light-bg-colour);
+	border: 2px solid var(--light-bg-colour);
+	border-radius: 5px;
+	margin-top: 3px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	height: 25px;
+	width: 200px;
+	color: var(--text);
+}
+
+	input:focus {
+		outline-color: var(--accent);
+	}
+
+	input::placeholder {
+		color: var(--hint-text);
+	}
+
+.dist {
+	color: var(--highlight);
+}
+
+.key-area {
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	text-align: center;
+	color: var(--highlight);
+}
+
+button {
+	background-color: var(--accent-darker);
+	border: 2px solid var(--accent-darker);
+	color: var(--text);
+	border-radius: 5px;
+	height: 25px;
+	width: 120px;
+	align-self: center;
+}
+
+	button:focus {
+		outline-color: var(--accent);
+	}
+
+#sub {
+	border-color: var(--accent-darker);
+}
+
+.sub-input {
+	margin-bottom: 49px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    margin: 50px auto 0 auto;
+}
+.info p {
+    color: var(--text);
+}
+
+.info .meme {
+    margin-top: 15px;
 }

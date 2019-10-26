@@ -1,8 +1,15 @@
 ﻿@import "variables.css";
 
 body {
-	background-color: var(--main-bg-colour);
+	background-color: var(--light-bg-colour);
 	color: var(--text);
 	margin: 0;
 	font-family: var(--font);
+}
+
+hr {
+	margin: 0;
+	border: 0;
+	height: 2px;
+	background: var(--gradient);
 }
