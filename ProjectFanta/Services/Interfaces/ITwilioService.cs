@@ -2,6 +2,6 @@ namespace ProjectFanta.Services.Interfaces
 {
     public interface ITwilioService 
     {
-       void SendMessage(IUser targetUser);
+       void SendMessage(IUser targetUser, string message);
     }
 }
