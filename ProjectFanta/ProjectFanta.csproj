@@ -11,4 +11,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\main.css" />
+  </ItemGroup>
 </Project>
