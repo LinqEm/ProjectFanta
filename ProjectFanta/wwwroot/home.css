@@ -1,65 +1,76 @@
 ﻿@import "main.css";
 @import "variables.css";
 
-hr {
-	margin: 0;
-	border: 0;
-	height: 2px;
-	background: var(--gradient);
-}
-
-.owner {
+.create {
     display: flex;
     flex-direction: column;
-    max-width: 425px;
+    max-width: 250px;
     margin: auto;
+    padding: 20px;
     align-self: center;
     background-color: rgb(45, 45, 45);
     border-radius: 5px;
-    border: 2px solid var(--accent);
-}
-
-form {
-	align-self: center;
-}
-
-fieldset {
-	font-size: 1.4em;
-	padding: 0.5em;
-	border: none;
-	font-family: sans-serif;
-}
-
-input, button {
-	font-size: inherit;
-	padding: 0.2em;
-	margin: 0.1em 0.2em;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-	border: 2px solid;
-	border-radius: 5px;
-}
-
-input {
-	border-color: white;
-}
-
-	input:focus {
-		outline: none;
-		border: 2px solid var(--accent);
-	}
-
-button {
-	background-color: var(--accent);
-	border-color: var(--accent);
-}
-
-.key-area {
-	border-radius: 5px;
-	padding: 10px;
+    border: 2px solid #4179B5;
+    box-sizing: border-box;
 }
 
 h2 {
-	margin: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+    color: #A2A2A2;
+}
+
+.desc {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+input {
+    background-color: #464646;
+    border: 2px solid #464646;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    height: 25px;
+    width: 200px;
+    color: var(--text);
+}
+input:focus {
+    outline: none;
+    border: 2px solid var(--accent);
+}
+input::placeholder {
+    color: #A2A2A2;
+}
+
+.dist {
+    color: #CC8C2C;
+}
+
+.key-area {
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #CC8C2C;
+}
+
+button {
+    background-color: #35608E;
+    border: 2px solid #35608E;
+    color: var(--text);
+    border-radius: 5px;
+    height: 25px;
+    width: 120px;
+    align-self: center;
 }

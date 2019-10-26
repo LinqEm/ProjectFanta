@@ -6,3 +6,10 @@ body {
 	margin: 0;
 	font-family: var(--font);
 }
+
+hr {
+	margin: 0;
+	border: 0;
+	height: 2px;
+	background: var(--gradient);
+}
