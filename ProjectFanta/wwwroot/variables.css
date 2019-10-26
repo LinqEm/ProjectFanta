@@ -2,5 +2,6 @@
     --main-bg-colour: #202020;  
     --text: white;
     --gradient: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+    --accent: #5195DD;
     --font: 'Poppins', sans-serif;
 }

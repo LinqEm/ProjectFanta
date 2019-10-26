@@ -24,18 +24,42 @@ h1 {
     text-align: center;
 }
 
-input {
-    border-radius: 5px;
-    border: 2px solid white;
-    height: 30px;
+form {
+    align-self: center;
     margin-top: 30%;
-    padding: 5px;
-    font-size: 1.1rem;
+}
+
+fieldset {
+    font-size: 1.4em;
+    padding: 0.5em;
+    border: none;
+    font-family: sans-serif;
+}
+
+input, button {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 2px solid;
+    border-radius: 5px;
+
+}
+
+input {
+    border-color: white;
 }
 input:focus {
     outline: none;
-    border: 2px solid #5433ff;
+    border: 2px solid var(--accent);
 }
+
+button {
+    background-color: var(--accent);
+    border-color: var(--accent);
+} 
 
 .key-area {
     margin-top: 30px;
