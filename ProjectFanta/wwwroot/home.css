@@ -118,3 +118,7 @@ button {
 #sub {
 	border-color: var(--accent-darker);
 }
+
+.sub-input {
+    margin-bottom: 49px;
+}
