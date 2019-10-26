@@ -45,8 +45,7 @@ input {
     color: var(--text);
 }
 input:focus {
-    outline: none;
-    border: 2px solid var(--accent);
+    outline-color: var(--accent);
 }
 input::placeholder {
     color: #A2A2A2;
@@ -73,4 +72,7 @@ button {
     height: 25px;
     width: 120px;
     align-self: center;
+}
+button:focus {
+    outline-color: var(--accent);
 }
