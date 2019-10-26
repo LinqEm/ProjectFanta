@@ -80,6 +80,10 @@ button {
 	align-self: center;
 }
 
-	button:focus {
-		outline-color: var(--accent);
-	}
+    button:focus {
+        outline-color: var(--accent);
+    }
+
+#sub {
+    border-color: #35608E;
+}
