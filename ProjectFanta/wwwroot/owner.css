@@ -8,14 +8,13 @@ hr {
 }
 
 .main {
-	display: flex;
-	flex-direction: column;
-	max-width: 425px;
-	margin: auto;
-	align-self: center;
-	align-items: center;
-	background-color: rgb(45, 45, 45);
-	border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 425px;
+    margin: auto;
+    align-self: center;
+    background-color: rgb(45, 45, 45);
+    border-radius: 5px;
 }
 
 h1 {
