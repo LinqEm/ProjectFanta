@@ -6,7 +6,7 @@ namespace ProjectFanta.Services.Interfaces
 
     public interface IBroadcaster 
     {
-        void Broadcast(IEnumerable<IUser> subscribers);
+        void Broadcast(string broadcastMessage, IGroup group);
     }
 
 }

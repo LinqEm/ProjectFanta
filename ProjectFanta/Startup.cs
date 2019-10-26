@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjectFanta.Services;
+using ProjectFanta.Services.Interfaces;
 
 namespace ProjectFanta
 {
@@ -24,10 +26,11 @@ namespace ProjectFanta
 
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddSingleton<ITwilioService, TwilioService>();
+            services.AddSingleton<IGroupManager, GroupManager>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ITwilioService twilioService)
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();

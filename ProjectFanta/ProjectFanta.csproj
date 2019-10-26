@@ -12,6 +12,10 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Twilio" Version="5.34.0" />
+    <PackageReference Include="Twilio.AspNet.Core" Version="5.33.1" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Remove="wwwroot\main.css" />
   </ItemGroup>
 </Project>
