@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,27 +24,17 @@ namespace ProjectFanta
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
             else
-            {
                 app.UseHsts();
-            }
 
-            app.UseHttpsRedirection()
-                .Use(async (ctx, next) =>
-                {
-                    await next();
-                })
-                .UseStaticFiles();
-
+            app.UseDefaultFiles().UseStaticFiles();
         }
     }
 }
