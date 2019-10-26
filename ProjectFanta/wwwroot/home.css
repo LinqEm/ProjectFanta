@@ -5,7 +5,12 @@ header {
 	background-color: var(--main-bg-colour);
 }
 
-.create {
+.panel-container {
+    display: flex;
+    max-width: 600px;
+}
+
+.panels {
 	display: flex;
 	flex-direction: column;
 	max-width: 250px;
