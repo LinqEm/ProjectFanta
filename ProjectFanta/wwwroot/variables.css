@@ -1,0 +1,6 @@
+:root {
+    --main-bg-colour: #202020;  
+    --text: white;
+    --gradient: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+    --font: 'Poppins', sans-serif;
+}
