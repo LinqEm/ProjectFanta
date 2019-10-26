@@ -1,10 +1,8 @@
-﻿using System;
-namespace ProjectFanta.wwwroot
-{
- public class main
- {
-     public main()
-     {
-     }
- }
+﻿@import "variables.css";
+
+body {
+	background-color: var(--main-bg-colour);
+	color: var(--text);
+	margin: 0;
+	font-family: var(--font);
 }
