@@ -3,11 +3,37 @@
 
 header {
 	background-color: var(--main-bg-colour);
+	font-size: 0;
 }
 
+	header .container {
+		max-width: 640px;
+		margin: 0 auto;
+		overflow: auto;
+	}
+
+	header h1 {
+		margin: 0;
+	}
+
+		header h1 img {
+			margin-top: 30px;
+			width: 100px;
+		}
+
+	header img.header-silhouette {
+		width: 100%;
+		margin: 0;
+	}
+
+	header h2 {
+		margin: 50px 0;
+		font-size: 20px;
+	}
+
 .panel-container {
-    display: flex;
-    max-width: 600px;
+	display: flex;
+	max-width: 600px;
 }
 
 .panels {
@@ -85,10 +111,10 @@ button {
 	align-self: center;
 }
 
-    button:focus {
-        outline-color: var(--accent);
-    }
+	button:focus {
+		outline-color: var(--accent);
+	}
 
 #sub {
-    border-color: var(--accent-darker);
+	border-color: var(--accent-darker);
 }
