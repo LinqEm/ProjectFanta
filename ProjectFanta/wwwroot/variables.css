@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence&display=swap');
 
 :root {
-    --main-bg-colour: #202020;  
-    --text: #E8E8E8;
-    --gradient: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
-    --accent: #5195DD;
-    --font: 'Convergence', sans-serif;
+	--main-bg-colour: #2E2E2E;
+	--light-bg-colour: #464646;
+	--text: #E8E8E8;
+	--gradient: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+	--accent: #5195DD;
+	--font: 'Convergence', sans-serif;
 }
