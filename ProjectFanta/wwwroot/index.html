@@ -22,7 +22,7 @@
 			<h2>Create</h2>
 			<p class="desc">a distribution group</p>
 			<p>Enter your phone number:</p>
-			<input placeholder="00000000000"></input>
+			<input type="tel" pattern="\+[0-9]+" placeholder="+441234567890"></input>
 
 			<p>Here's your distribution key!</p>
 			<p class="dist">Distribute it!</p>
@@ -38,9 +38,9 @@
 			<p class="desc">a distribution group</p>
 
 			<p>Enter the distribution key:</p>
-			<input placeholder="00000000000"></input>
+			<input type="tel" placeholder="a1b2c3d4" pattern="[a-z0-9]{8}" />
 			<p>Enter your phone number:</p>
-			<input class="sub-input" placeholder="00000000000"></input>
+			<input type="text" class="sub-input" placeholder="+441234567890" />
 			<button type="submit">Go</button>
 		</form>
 	</div>

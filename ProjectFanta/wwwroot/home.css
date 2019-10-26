@@ -40,14 +40,14 @@ header {
 	}
 
 	header h2 {
-		margin: 50px 0;
+		margin: 60px 0 120px 0;
 		font-size: 20px;
 	}
 
 .panel-container {
 	display: flex;
-    max-width: 775px;
-	margin: -100px auto 0 auto;
+	max-width: 775px;
+	margin: -140px auto 0 auto;
 }
 
 .panels {
@@ -138,15 +138,16 @@ button {
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    max-width: 640px;
-    margin: 50px auto 0 auto;
-}
-.info p {
-    color: var(--text);
+	display: flex;
+	flex-direction: column;
+	max-width: 640px;
+	margin: 50px auto 0 auto;
 }
 
-.info .meme {
-    margin-top: 15px;
-}
+	.info p {
+		color: var(--text);
+	}
+
+	.info .meme {
+		margin-top: 15px;
+	}
