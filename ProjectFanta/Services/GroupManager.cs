@@ -10,6 +10,11 @@ namespace ProjectFanta.Services
 
         private IList<IGroup> groups { get; set; }
 
+        public GroupManager()
+        {
+            this.groups = new List<IGroup>();
+        }
+
         private string GenerateKey()
         {
             var random = new Random();
@@ -42,7 +47,8 @@ namespace ProjectFanta.Services
         {
             var key = GenerateKey();
 
-            while (groups.Any(g => g.Key == key)) {
+            while (groups.Any(g => g.Key == key))
+            {
                 key = this.GenerateKey();
             }
 

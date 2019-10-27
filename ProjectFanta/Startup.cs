@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,18 +27,20 @@ namespace ProjectFanta
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc((MvcOptions obj) => obj.EnableEndpointRouting = false);
+
             services.AddSingleton<ITwilioService, TwilioService>();
             services.AddSingleton<IGroupManager, GroupManager>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ITwilioService twilioService)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
             else
                 app.UseHsts();
 
-            app.UseDefaultFiles().UseStaticFiles();
+            app.UseMvc().UseDefaultFiles().UseStaticFiles();
         }
     }
 }
