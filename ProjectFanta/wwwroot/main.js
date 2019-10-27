@@ -25,6 +25,8 @@ function subscribe() {
     const yourKey = document.getElementById('yourKey').value;
     const yourPhone = document.getElementById('yourPhone').value;
 
+    event.preventDefault();
+
     fetch(`/api/group/${yourKey}/${yourPhone}`, {
         method: 'PUT',
     }).then(res => console.log(res))
