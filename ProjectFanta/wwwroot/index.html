@@ -19,11 +19,11 @@
 
 
 	<div class="panel-container">
-		<form id="create" class="panels">
+		<form id="create" class="panels" onsubmit="create();">
 			<h2>Create</h2>
 			<p class="desc">a distribution group</p>
 			<p>Enter your phone number:</p>
-			<input id="phoneNo" type="tel" pattern="\+[0-9]+" placeholder="+441234567890"></input>
+			<input id="phoneNo" type="tel" pattern="\+[0-9]+" placeholder="+441234567890" required></input>
 
 			<div style="display: none;" id="distKey" class="distKey">
 				<p>Here's your distribution key!</p>
@@ -37,7 +37,7 @@
 				<div class="circles"></div>
 			</div>
 
-			<button type="submit" onclick="create();">Go</button>
+			<button type="submit">Go</button>
 		</form>
 
 		<form id="sub" class="panels">
