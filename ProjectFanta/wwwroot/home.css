@@ -150,7 +150,7 @@ button {
 }
 
 .sub-input {
-	margin-bottom: 49px;
+	margin-bottom: 15px;
 }
 
 .info {
@@ -167,3 +167,9 @@ button {
 	.info .meme {
 		margin-top: 15px;
 	}
+
+.success-message {
+	text-align: center;
+	color: var(--highlight);
+	margin-bottom: 15px;
+}

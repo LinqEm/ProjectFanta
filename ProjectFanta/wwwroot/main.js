@@ -24,6 +24,13 @@ function create() {
 function subscribe() {
     const yourKey = document.getElementById('yourKey').value;
     const yourPhone = document.getElementById('yourPhone').value;
+    const success = document.getElementById('success');
+
+    console.log(success.style.color);
+
+    if (success.style.color === "rgb(46, 46, 46)") {
+        success.style.color = "#CC8C2C";
+    }
 
     event.preventDefault();
 
