@@ -11,7 +11,7 @@
 		<div class="container">
 			<h1><img src="images/logo.png" alt="Fanta" /></h1>
 			<h2>
-				Make an SMS distribution group in seconds.
+				Make an SMS distribution group in seconds!
 			</h2>
 		</div>
 		<img class="header-silhouette" src="images/banner-silhouette.svg" alt="" aria-hidden="true" />
@@ -19,36 +19,43 @@
 
 
 	<div class="panel-container">
-		<form id="create" class="panels">
+		<form id="create" class="panels" onsubmit="create();">
 			<h2>Create</h2>
 			<p class="desc">a distribution group</p>
 			<p>Enter your phone number:</p>
-			<input id="phoneNo" type="tel" pattern="\+[0-9]+" placeholder="+441234567890"></input>
+			<input id="phoneNo" type="tel" pattern="\+[0-9]+" placeholder="+441234567890" required></input>
 
-			<p>Here's your distribution key!</p>
-			<p class="dist">Distribute it!</p>
-			<div id="key" class="key-area">
-				(key)
+			<div style="display: none;" id="distKey" class="distKey">
+				<p>Here's your distribution key!</p>
+				<p class="dist">Distribute it!</p>
+				<div id="key" class="key-area"></div>
+			</div>
+			
+			<div id="pending" class="pending">
+				<div class="circles"></div>
+				<div class="circles"></div>
+				<div class="circles"></div>
 			</div>
 
-			<button type="submit" onclick="create();">Go</button>
+			<button type="submit">Go</button>
 		</form>
 
-		<form id="sub" class="panels">
+		<form id="sub" class="panels" onsubmit="subscribe();">
 			<h2>Subscribe to</h2>
 			<p class="desc">a distribution group</p>
 
 			<p>Enter the distribution key:</p>
-			<input type="tel" placeholder="a1b2c3d4" pattern="[a-z0-9]{8}" />
+			<input id="yourKey" type="text" placeholder="a1b2c3d4" pattern="[a-zA-Z0-9]{8}" />
 			<p>Enter your phone number:</p>
-			<input type="text" class="sub-input" placeholder="+441234567890" />
+			<input id="yourPhone" type="tel" pattern="\+[0-9]+" class="sub-input" placeholder="+441234567890" />
+			
 			<button type="submit">Go</button>
 		</form>
 	</div>
 
 	<div class="info">
 		<p>Project fanta was created by 4 dudes meming during the HackTheMidlands hackathon 2019 in birmingham.</p>
-		<p class="meme">We hope you find great conveniance from this simple app powered by Twilo!</p>
+		<p class="meme">We hope you find great conveniance from this simple app powered by Twilio!</p>
 	</div>
 </body>
-</html>
+</html>W
