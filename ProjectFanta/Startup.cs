@@ -31,6 +31,9 @@ namespace ProjectFanta
 
             services.AddSingleton<ITwilioService, TwilioService>();
             services.AddSingleton<IGroupManager, GroupManager>();
+            services.AddMvc(o => {
+                o.EnableEndpointRouting = false;
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

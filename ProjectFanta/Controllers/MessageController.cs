@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using ProjectFanta.Services;
 using ProjectFanta.Services.Interfaces;
 using Twilio.AspNet.Common;
@@ -12,12 +13,17 @@ namespace ProjectFanta.Controllers
         private IGroupManager groupManager;
         private Broadcaster broadcaster;
 
+        
         public MessageController(ITwilioService twilioService, IGroupManager groupManager)
         {
             this.groupManager = groupManager;
             this.broadcaster = new Broadcaster(twilioService);
+
+            var key = this.groupManager.NewGroup("+447713878886");
+            this.groupManager.AddSubscriberByKey(key, new User() { PhoneNumber = "+447713878886"});
         }
 
+        [HttpPost]
         public TwiMLResult Index(SmsRequest incomingMessage)
         {
             var message = incomingMessage.Body;
