@@ -37,7 +37,7 @@ namespace ProjectFanta.Services
             updatedGroup.Subscribers.Add(newUser);
             this.groups.Remove(targetGroup);
             this.groups.Add(updatedGroup);
-            this.broadcaster.Broadcast("You have now subscribed to a broadcast channel. Save this number to identify broadcast messages", new List<IUser>() { newUser });
+            this.broadcaster.Broadcast("You have now subscribed to a broadcast group. Save this number to identify broadcast messages", new List<IUser>() { newUser });
         }
 
         public void RemoveGroupByAdmin(string adminNumber)
@@ -57,7 +57,14 @@ namespace ProjectFanta.Services
 
             var newGroup = new Group(adminNumber, key);
             this.groups.Add(newGroup);
+
+            this.broadcaster.Broadcast("You have now created a broadcast group. Send messages to this number to published a message to this group", new List<IUser>() { new User() { PhoneNumber = adminNumber } });
             return key;
+        }
+
+        public void UnsubscribeUser(string userNumber)
+        {
+            this.groups.Select(g => g.Subscribers.Where(u => u.PhoneNumber != userNumber));
         }
     }
 }
