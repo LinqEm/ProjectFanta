@@ -115,6 +115,22 @@ input {
 	color: var(--highlight);
 }
 
+.pending {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 28.5px;
+	margin-bottom: 48.5px;
+}
+
+.pending .circles {
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border-radius: 50%;
+	background: var(--light-bg-colour);
+}
+
 button {
 	background-color: var(--accent-darker);
 	border: 2px solid var(--accent-darker);
