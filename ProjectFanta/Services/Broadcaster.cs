@@ -22,6 +22,14 @@ namespace ProjectFanta.Services
             }
         }
 
+        public void Broadcast(string broadcastMessage, IList<IUser> users)
+        {
+            var subscribers = users;
+            foreach (var sub in subscribers)
+            {
+                this.twilioService.SendMessage(sub, broadcastMessage);
+            }
+        }
     }
 
 }

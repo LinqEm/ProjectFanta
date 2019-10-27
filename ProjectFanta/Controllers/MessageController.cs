@@ -18,13 +18,11 @@ namespace ProjectFanta.Controllers
         {
             this.groupManager = groupManager;
             this.broadcaster = new Broadcaster(twilioService);
-
-            var key = this.groupManager.NewGroup("+447713878886");
-            this.groupManager.AddSubscriberByKey(key, new User() { PhoneNumber = "+447713878886"});
         }
 
         [HttpPost]
-        public TwiMLResult Index(SmsRequest incomingMessage)
+        [Route("/api/message")]
+        public TwiMLResult Index([FromForm] SmsRequest incomingMessage)
         {
             var message = incomingMessage.Body;
             var adminNumber = incomingMessage.From;
