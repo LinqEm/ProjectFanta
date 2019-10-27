@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="home.css" />
+	<script src="./main.js"></script>
 </head>
 <body>
 	<hr>
@@ -18,19 +19,19 @@
 
 
 	<div class="panel-container">
-		<form class="panels">
+		<form id="create" class="panels">
 			<h2>Create</h2>
 			<p class="desc">a distribution group</p>
 			<p>Enter your phone number:</p>
-			<input type="tel" pattern="\+[0-9]+" placeholder="+441234567890"></input>
+			<input id="phoneNo" type="tel" pattern="\+[0-9]+" placeholder="+441234567890"></input>
 
 			<p>Here's your distribution key!</p>
 			<p class="dist">Distribute it!</p>
-			<div class="key-area">
-				WcP10Dk
+			<div id="key" class="key-area">
+				(key)
 			</div>
 
-			<button type="submit">Go</button>
+			<button type="submit" onclick="create();">Go</button>
 		</form>
 
 		<form id="sub" class="panels">
