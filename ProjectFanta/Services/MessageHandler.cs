@@ -13,12 +13,13 @@ namespace ProjectFanta.Services
         public MessageHandler(ITwilioService twilioService, IGroupManager groupManager)
         {
             this.broadcaster = new Broadcaster(twilioService);
+            this.groupManager = groupManager;
         }
 
         public MessagingResponse Handle(SmsRequest request)
         {
             var messagingResponse = new MessagingResponse();
-            if (request.Body == "UNSUBSCRIBE")
+            if (request.Body.ToUpper() == "UNSUBSCRIBE")
             {
                 this.Unsubscribe(request.From);
                 messagingResponse.Message("You have now been unsubscribed from any groups you previously subscribed to.");
