@@ -1,6 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using ProjectFanta.Models;
 using ProjectFanta.Services;
 using ProjectFanta.Services.Interfaces;
@@ -10,10 +11,12 @@ namespace ProjectFanta.Controllers
     public class GroupController : ControllerBase
     {
         private readonly IGroupManager groupManager;
+        private readonly IConfiguration configuration;
 
-        public GroupController(IGroupManager groupManager)
+        public GroupController(IGroupManager groupManager, IConfiguration configuration)
         {
             this.groupManager = groupManager;
+            this.configuration = configuration;
         }
 
         [HttpPut]
@@ -30,7 +33,7 @@ namespace ProjectFanta.Controllers
         {
             var groupKey = this.groupManager.NewGroup(model.PhoneNumber);
             this.Response.StatusCode = StatusCodes.Status201Created;
-            return new JsonResult(groupKey);
+            return new JsonResult(new { key = groupKey, receivePhoneNumber = this.configuration.GetValue<string>("TwilioPhoneNumber") } );
         }
     }
 }

@@ -9,10 +9,12 @@ namespace ProjectFanta.Services
     {
 
         private IList<IGroup> groups { get; set; }
+        private IBroadcaster broadcaster;
 
-        public GroupManager()
+        public GroupManager(ITwilioService twilioService)
         {
             this.groups = new List<IGroup>();
+            this.broadcaster = new Broadcaster(twilioService);
         }
 
         private string GenerateKey()
@@ -35,6 +37,7 @@ namespace ProjectFanta.Services
             updatedGroup.Subscribers.Add(newUser);
             this.groups.Remove(targetGroup);
             this.groups.Add(updatedGroup);
+            this.broadcaster.Broadcast("You have now subscribed to a broadcast channel. Save this number to identify broadcast messages", new List<IUser>() { newUser });
         }
 
         public void RemoveGroupByAdmin(string adminNumber)

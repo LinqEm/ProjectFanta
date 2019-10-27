@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using ProjectFanta.Services;
 using ProjectFanta.Services.Interfaces;
 using Twilio.AspNet.Common;
@@ -12,13 +13,16 @@ namespace ProjectFanta.Controllers
         private IGroupManager groupManager;
         private Broadcaster broadcaster;
 
+        
         public MessageController(ITwilioService twilioService, IGroupManager groupManager)
         {
             this.groupManager = groupManager;
             this.broadcaster = new Broadcaster(twilioService);
         }
 
-        public TwiMLResult Index(SmsRequest incomingMessage)
+        [HttpPost]
+        [Route("/api/message")]
+        public TwiMLResult Index([FromForm] SmsRequest incomingMessage)
         {
             var message = incomingMessage.Body;
             var adminNumber = incomingMessage.From;

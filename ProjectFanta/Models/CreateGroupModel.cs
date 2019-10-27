@@ -8,7 +8,6 @@ namespace ProjectFanta.Models
 
         [JsonProperty("phoneNumber")]
         public string PhoneNumber { get; set; }
-
     }
 
 }
