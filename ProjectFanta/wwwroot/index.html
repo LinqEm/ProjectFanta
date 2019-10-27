@@ -40,14 +40,15 @@
 			<button type="submit">Go</button>
 		</form>
 
-		<form id="sub" class="panels">
+		<form id="sub" class="panels" onsubmit="subscribe();">
 			<h2>Subscribe to</h2>
 			<p class="desc">a distribution group</p>
 
 			<p>Enter the distribution key:</p>
-			<input type="text" placeholder="a1b2c3d4" pattern="[a-zA-Z0-9]{8}" />
+			<input id="yourKey" type="text" placeholder="a1b2c3d4" pattern="[a-zA-Z0-9]{8}" />
 			<p>Enter your phone number:</p>
-			<input type="tel" pattern="\+[0-9]+" class="sub-input" placeholder="+441234567890" />
+			<input id="yourPhone" type="tel" pattern="\+[0-9]+" class="sub-input" placeholder="+441234567890" />
+			
 			<button type="submit">Go</button>
 		</form>
 	</div>

@@ -20,3 +20,13 @@ function create() {
     .then(res => key.innerHTML = res.key)
     .catch((err) => console.log(err));
 }
+
+function subscribe() {
+    const yourKey = document.getElementById('yourKey').value;
+    const yourPhone = document.getElementById('yourPhone').value;
+
+    fetch(`/api/group/${yourKey}/${yourPhone}`, {
+        method: 'PUT',
+    }).then(res => console.log(res))
+    .catch((err) => console.log(err));
+}
