@@ -61,5 +61,10 @@ namespace ProjectFanta.Services
             this.broadcaster.Broadcast("You have now created a broadcast group. Send messages to this number to published a message to this group", new List<IUser>() { new User() { PhoneNumber = adminNumber } });
             return key;
         }
+
+        public void UnsubscribeUser(string userNumber)
+        {
+            this.groups.Select(g => g.Subscribers.Where(u => u.PhoneNumber != userNumber));
+        }
     }
 }

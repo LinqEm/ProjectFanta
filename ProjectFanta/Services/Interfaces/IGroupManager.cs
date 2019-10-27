@@ -7,5 +7,7 @@ namespace ProjectFanta.Services.Interfaces
         void RemoveGroupByAdmin(string adminNumber);
         // Creates a group and returns the auth key for that group
         string NewGroup(string adminNumber);
+
+        void UnsubscribeUser(string userNumber);
     }
 }
